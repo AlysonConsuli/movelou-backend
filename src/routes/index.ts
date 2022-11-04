@@ -1,7 +1,7 @@
 import { Router } from "express";
-import healthRouter from "./healthRouter.js";
+import newsRouter from "./newsRouter.js";
 
 const router = Router();
-router.use(healthRouter);
+router.use(newsRouter);
 
 export default router;

@@ -7,12 +7,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Users {
-  id        Int       @id @default(autoincrement())
-  email     String    @unique
-  password  String
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @updatedAt @db.Timestamptz()
+model Article {
+  id          Int     @id @default(autoincrement())
+  featured    Boolean
+  title       String
+  url         String
+  imageUrl    String
+  newsSite    String
+  summary     String
+  publishedAt String
 
-  @@map("users")
+  @@map("article")
 }

@@ -1,10 +1,6 @@
 import prisma from "../src/config/db.js";
 
-const admin = [{ email: "admin@admin.com", password: "1234" }];
-
-async function main() {
-  await prisma.users.createMany({ data: admin, skipDuplicates: true });
-}
+async function main() {}
 
 main()
   .catch((e) => {
